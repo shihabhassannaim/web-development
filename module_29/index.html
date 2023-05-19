@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bored api</title>
+</head>
+<body>
+    <h1 id="change-activities"></h1>
+    <p>learn more from this site <a href="www.google.com">click here</a></p>
+
+    <script>
+        fetch('http://www.boredapi.com/api/activity/')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById("change-activities").innerText = data.activity ;
+        })
+    </script>
+    
+</body>
+</html>
